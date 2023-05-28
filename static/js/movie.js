@@ -16,9 +16,9 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
       let image = "https://image.tmdb.org/t/p/w200/" + a['poster_path']
       let vote_average = a['vote_average']
       let temp_html = 
-      `<div>
-        <h2> ${title} </h2>
+      `<div class="movie-card">
         <img src="${image}" class="poster_path">
+        <h2> ${title} </h2>
         <div> ${overview} </div>
         <div> ${vote_average} </div>
       </div>`
