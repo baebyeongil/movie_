@@ -26,7 +26,7 @@ body {
   margin: auto; */
 }
 
-#search-input{
+#search_input{
   margin-left: 20px;
   min-width: 200px;
   padding: 5px 10px;
@@ -42,6 +42,11 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+  transition: all 0.2s linear;
 }
 
 .movie-card {
@@ -63,4 +68,11 @@ button {
 
 h2 {
   font-size: 19px;
+  border-bottom: 3px solid black;
+  padding-bottom: 3px;
+}
+
+.overview {
+  border-top: 3px solid black;
+  padding-bottom: 3px;
 }

@@ -15,13 +15,20 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
       let overview = a['overview']
       let image = "https://image.tmdb.org/t/p/w200/" + a['poster_path']
       let vote_average = a['vote_average']
-      let temp_html = 
-      `<div class="movie-card">
-        <img src="${image}" class="poster_path">
-        <h2> ${title} </h2>
-        <div> ${overview} </div>
-        <div> ${vote_average} </div>
-      </div>`
+      let temp_html =
+        `<div class="movie-card">
+          <img src="${image}" class="poster_path">
+           <h2> ${title} </h2>
+           <div> Grade : ${vote_average} </div>
+           <div class="overview"> ${overview} </div>
+        </div>`
       document.getElementById("cards").insertAdjacentHTML('beforeend', temp_html);
     })
   })
+
+document.getElementById("search_input")
+  .addEventListener("keyup", function (event) {
+    if (event.code === 'Enter') {
+      document.getElementById(searchbtn()).click();
+    }
+  });
